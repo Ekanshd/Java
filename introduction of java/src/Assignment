@@ -1,1 +1,27 @@
+package Assignments;
+
+import java.util.Scanner;
+
+public class Assignment_1 {
+
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter Name:");
+	
+	String name=sc.next();
+	
+	System.out.println("Roll Number:");
+	
+	 int Roll=sc.nextInt();
+	 
+	 System.out.println("Feild of Interset:");
+		
+	 String Feild=sc.next();
+	 
+	 System.out.println("Hey, my name is "+name+" and my roll number is "+Roll+". My field of interest are "+Feild+".");
+	
+	
+	}
+
+}
 
