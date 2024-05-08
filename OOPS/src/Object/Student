@@ -1,0 +1,18 @@
+package Object;
+
+public class Student {
+
+	int sid;
+	String sname;
+	public void disp(int sid,String sname) {
+		System.out.println(sid+" "+sname);
+	}
+	public static void main(String[] args) {
+		Student s1=new Student();
+		s1.disp(101, "jhon");
+		s1.disp(102, "sam");
+
+		s1.disp(105, "Ajay");
+	}
+
+}
