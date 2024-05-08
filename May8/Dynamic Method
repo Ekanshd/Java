@@ -1,0 +1,37 @@
+package com.may8;
+class MobileOs{
+	void disp() {
+		System.out.println("We are discussiong about mobile operating System:)");
+		
+	}
+}
+class Android extends MobileOs{
+	void disp() {
+		super.disp();
+		System.out.println("This is Android operating System:)");
+		
+	}	
+}
+class Ios extends MobileOs{
+	void disp() {
+		System.out.println("This is ios operating System:)");
+		
+	}	
+}
+public class DynamicMethod {
+
+	public static void main(String[] args) {
+		MobileOs m1;
+		/*Android a1=new Android();
+		a1.disp();
+		Ios i1=new Ios();
+		i1.disp();*/
+		m1=new Android();
+		m1.disp();
+		m1=new Ios();
+
+		m1.disp();
+		
+	}
+
+}
