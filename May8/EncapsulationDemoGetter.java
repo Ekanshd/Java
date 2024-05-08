@@ -18,6 +18,6 @@ public class EncapsulationDemoGetter {
 	public static void main(String[] args) {
 		Course c1=new Course();
 		//System.out.println(c1.cid+" "+c1.cname);
-System.out.println(c1.getCid()+" "+c1.getCname());
+		System.out.println(c1.getCid()+" "+c1.getCname());
 	}
 }
