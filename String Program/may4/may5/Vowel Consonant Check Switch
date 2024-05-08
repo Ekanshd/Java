@@ -1,0 +1,39 @@
+package com.may5;
+
+import java.util.Scanner;
+
+public class VowelConsonantCheckSwitch {
+    public static void main(String[] args) {
+        // Create a Scanner object to read user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a character
+        System.out.print("Enter a character: ");
+        char ch = scanner.next().charAt(0);
+
+        // Convert the character to lowercase for case-insensitive matching
+        ch = Character.toLowerCase(ch);
+
+        // Check if the character is an alphabet (a-z)
+        if (ch >= 'a' && ch <= 'z') {
+            // Use a switch statement to check if the character is a vowel
+            switch (ch) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    System.out.println(ch + " is a vowel.");
+                    break;
+                default:
+                    System.out.println(ch + " is a consonant.");
+            }
+        } 
+        else {
+            System.out.println(ch + " is not an alphabet.");
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+}
