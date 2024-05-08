@@ -1,20 +1,20 @@
 package com.may8;
 class MobileOs{
 	void disp() {
-		System.out.println("We are discussiong about mobile operating System:)");
+		System.out.println("We are discussiong about mobile operating System:");
 		
 	}
 }
 class Android extends MobileOs{
 	void disp() {
 		super.disp();
-		System.out.println("This is Android operating System:)");
+		System.out.println("This is Android operating System:");
 		
 	}	
 }
 class Ios extends MobileOs{
 	void disp() {
-		System.out.println("This is ios operating System:)");
+		System.out.println("This is ios operating System:");
 		
 	}	
 }
