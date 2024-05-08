@@ -29,7 +29,6 @@ public class DynamicMethod {
 		m1=new Android();
 		m1.disp();
 		m1=new Ios();
-
 		m1.disp();
 		
 	}
