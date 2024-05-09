@@ -1,0 +1,22 @@
+package com.may9;
+class User{
+	String uname;
+	String email;
+	User(String uname,String email){
+		this.uname=uname;
+		this.email=email;
+	}
+	void show() {
+		System.out.println(uname+" "+email);
+	}
+	User(){};
+}
+public class ConstructorBasic {
+
+	public static void main(String[] args) {
+		User u2=new User("Ekansh","Eknash@gmail.com");
+		u2.show();
+
+	}
+
+}
