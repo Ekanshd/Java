@@ -1,0 +1,91 @@
+package com.may16;
+
+import java.util.Scanner;
+
+public class MenuDriven {
+
+	public static void main(String[] args) {
+		  Scanner sc = new Scanner(System.in);
+	        int choice;
+
+	        do {
+	            System.out.println("Menu:");
+	            System.out.println("1. String Concatenation");
+	            System.out.println("2. String Comparison");
+	            System.out.println("3. String Size");
+	            System.out.println("4. String Conversion (Lower or Upper)");
+	            System.out.println("5. Exit");
+	            System.out.print("Enter your choice: ");
+	            choice = sc.nextInt();
+	            sc.nextLine(); 
+
+	            switch (choice) {
+	                case 1:
+	                    stringConcat(sc);
+	                    break;
+	                case 2:
+	                    stringCompare(sc);
+	                    break;
+	                case 3:
+	                    stringSize(sc);
+	                    break;
+	                case 4:
+	                    stringConversion(sc);
+	                    break;
+	                case 5:
+	                    System.out.println("Exiting...");
+	                    break;
+	                default:
+	                    System.out.println("Invalid choice, please try again!!!!");
+	            }
+	        } while (choice != 5);
+
+	        sc.close();
+	    }
+
+	private static void stringConcat(Scanner sc) {
+		  System.out.print("Enter first string: ");
+	        String str1 = sc.nextLine();
+	        System.out.print("Enter second string: ");
+	        String str2 = sc.nextLine();
+	        String result = str1 + str2;
+	        System.out.println("Concatenated string: " + result);
+		
+	}
+
+	private static void stringSize(Scanner sc) {
+		System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+        System.out.println("Size of the string: " + str.length());
+		
+	}
+
+	private static void stringCompare(Scanner sc) {
+		 System.out.print("Enter first string: ");
+	        String str1 = sc.nextLine();
+	        System.out.print("Enter second string: ");
+	        String str2 = sc.nextLine();
+	        if (str1.equals(str2)) {
+	            System.out.println("The strings are equal.");
+	        } else {
+	            System.out.println("The strings are not equal.");
+	        }
+	}
+
+	private static void stringConversion(Scanner sc) {
+		System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+        System.out.print("Convert to (U)pper or (L)ower case? ");
+        char choice = sc.nextLine().charAt(0);
+        if (choice == 'U' || choice == 'u') {
+            System.out.println("Converted string: " + str.toUpperCase());
+        } else if (choice == 'L' || choice == 'l') {
+            System.out.println("Converted string: " + str.toLowerCase());
+        } else {
+            System.out.println("Invalid choice.");
+		
+	}
+
+	}
+}
+
