@@ -1,0 +1,100 @@
+package StudentMenuDriven;
+
+import java.util.Scanner;
+
+class Student {
+    private int id;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String contactNumber;
+
+    public Student(int id, String firstName, String lastName, String email, String contactNumber) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.contactNumber = contactNumber;
+    }
+    
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Name: " + firstName + " " + lastName + ", Email: " + email + ", Contact: " + contactNumber;
+    }
+}
+public class Main {
+	  private static final int MAX_STUDENTS = 100;
+	    private static Student[] students = new Student[MAX_STUDENTS];
+	    private static int studentCount = 0;
+
+
+	public static void main(String[] args) {
+		  Scanner sc = new Scanner(System.in);
+	        int choice;
+	        
+	        do {
+	        	  System.out.println("Menu:");
+	              System.out.println("1. Add Student");
+	              System.out.println("2. Display Students");
+	              System.out.println("3. Exit");
+	              System.out.print("Enter your choice: ");
+	              choice = sc.nextInt();
+	              sc.nextLine();
+	              
+	              switch(choice){
+	              case 1:
+	                    addStudent(sc);
+	                    break;
+	                case 2:
+	                    displayStudents();
+	                    break;
+	                case 3:
+	                    System.out.println("Exiting...");
+	                    break;
+	                default:
+	                    System.out.println("Invalid choice, please try again.");
+	            }
+	        } while (choice != 3);
+
+	        sc.close();
+	              }
+
+    private static void addStudent(Scanner scanner) {
+        if (studentCount >= MAX_STUDENTS) {
+            System.out.println("Maximum number of students reached. Cannot add more students.");
+            return;
+        }
+
+        System.out.print("Enter student ID: ");
+        int id = scanner.nextInt();
+        scanner.nextLine(); 
+        
+        System.out.print("Enter first name: ");
+        String firstName = scanner.nextLine();
+
+        System.out.print("Enter last name: ");
+        String lastName = scanner.nextLine();
+
+        System.out.print("Enter email: ");
+        String email = scanner.nextLine();
+
+        System.out.print("Enter contact number: ");
+        String contactNumber = scanner.nextLine();
+
+        students[studentCount] = new Student(id, firstName, lastName, email, contactNumber);
+        studentCount++;
+        System.out.println("Student added successfully.");
+    }
+    private static void displayStudents() {
+        if (studentCount == 0) {
+            System.out.println("No students to display.");
+        } else {
+            System.out.println("Student List:");
+            for (int i = 0; i < studentCount; i++) {
+                System.out.println(students[i]);
+            }
+	        }
+
+	}
+
+}
