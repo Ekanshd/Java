@@ -52,7 +52,7 @@ public class ArrayListBasic {
 		}
 		}
 
-		//advance for loop
+		//advance for loop we can say enhanced for loop
 		System.out.println("Enhanced for loop");
 		for(int k:l1) {
 			System.out.println(k);
