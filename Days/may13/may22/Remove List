@@ -44,7 +44,7 @@ public class ArrayListBasic {
 		}
 		System.out.println("Checking data avaible or not");
 		if(l1.isEmpty()) {
-			System.out.println("Data nopt avaible");
+			System.out.println("Data not avaible");
 		}
 		else {
 			for(int i=0;i<l1.size();i++) {
@@ -71,7 +71,7 @@ public class ArrayListBasic {
 			l1.clear();
 			System.out.println(l1);
 			if(l1.isEmpty()) {
-				System.out.println("Data nopt avaible");
+				System.out.println("Data not avaible");
 			}
 			else {
 				for(int i=0;i<l1.size();i++) {
