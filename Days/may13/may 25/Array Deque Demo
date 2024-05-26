@@ -1,0 +1,30 @@
+package com.may25;
+import java.util.ArrayDeque;
+import java.util.PriorityQueue;
+
+public class ArrayDequeDemo {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        PriorityQueue<String> pq = new PriorityQueue<String>();
+
+        pq.add("red");
+        pq.add("black");
+        pq.add("white");
+        pq.add("silver");
+        pq.add("green");
+
+        System.out.println(pq);
+        ArrayDeque<Integer>d=new ArrayDeque();
+        d.add(45);
+        d.addLast(50);
+        d.add(5);
+        d.addLast(250);
+        d.addFirst(100);
+        d.addFirst(200);
+        d.addLast(150);
+        System.out.println(d);
+        
+    }
+}
