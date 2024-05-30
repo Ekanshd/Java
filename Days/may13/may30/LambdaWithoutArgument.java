@@ -1,0 +1,24 @@
+package com.may30;
+
+interface Message{
+	//abstract method
+	void printmsg();
+     //non-abstract method
+	default void msg() {
+		
+		System.out.println("This is message function");
+	}
+
+}
+public class LambdaWithoutArgument {
+
+	public static void main(String[] args) {
+		Message m1=()->System.out.println("This is print message method");
+		
+		m1.printmsg();
+		
+		m1.msg();
+
+	}
+
+}
